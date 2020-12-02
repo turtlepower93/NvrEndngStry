@@ -1,8 +1,21 @@
 body {
-  padding: 50px;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
 a {
   color: #00B7FF;
+  padding:10px;
 }
+
+nav {
+  background-color: bisque;
+  text-align: right;
+  padding:10px;
+}
+
+#google-icon {
+width: 25px;
+}
+

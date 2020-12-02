@@ -9,11 +9,11 @@
 </head>
 <body>
   <nav>
-    <% if (user) { %>
+<!-- Add if user statement -->
+        <a href="/">HOME</a>
       <a href="/logout">LOG OUT</a>
-    <% } else { %>
-      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-    <% } %>
-  </nav>
+<!-- Add if else statement -->
+      <a href="/auth/google" class="login">LOG IN&nbsp;<img id="google-icon"src="https://i.imgur.com/FHjYyi0.png"></a>
+<!-- add ending bracket -->
+    </nav>
   <main>
-    <h1><%= title %></h1>
