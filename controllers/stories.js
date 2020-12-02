@@ -8,7 +8,6 @@ module.exports = {
 }
 
 function index(req,res) {
-    console.log('hi')
     //Story.find({}, function(err,stories) {
         res.render('stories/index', {title: 'The Library'});
     //});
@@ -19,9 +18,11 @@ function newStory(req,res) {
 }
 
 function create(req,res) {
-    
+    console.log('hi')
+    console.log(req.body);
+    res.redirect('stories')
 }
 
-function show() {
-
+function show(req,res) {
+    res.render('stories/show', {})
 }

@@ -4,8 +4,8 @@ var storiesCtrl = require('../controllers/stories.js')
 const isLogginIn = require('../config/auth')
 
 router.get('/', storiesCtrl.index);
-router.get('/new', storiesCtrl.new);
-// router.get('/:id', storiesCtrl.show);
-// router.get('/', isLogginIn, storiesCtrl.create);
+router.get('/new', isLogginIn, storiesCtrl.new);
+router.get('/:id', storiesCtrl.show);
+router.post('/', isLogginIn, storiesCtrl.create);
 
 module.exports = router;
