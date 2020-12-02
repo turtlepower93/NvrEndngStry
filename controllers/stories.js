@@ -8,9 +8,9 @@ module.exports = {
 }
 
 function index(req,res) {
-    //Story.find({}, function(err,stories) {
-        res.render('stories/index', {title: 'The Library'});
-    //});
+    Story.find({}, function(err,stories) {
+        res.render('stories/index', {title: 'The Library', stories});
+    });
 }
 
 function newStory(req,res) {
@@ -20,9 +20,13 @@ function newStory(req,res) {
 function create(req,res) {
     console.log('hi')
     console.log(req.body);
-    res.redirect('stories')
+    const story = new Story(req.body);
+    story.save(function(err) {
+        if (err) res.redirect('/stories/new')
+        res.redirect(`stories/${story._id}`)
+    });
 }
 
 function show(req,res) {
-    res.render('stories/show', {})
+    res.render('stories/show', {title:'BOOKS'})
 }

@@ -1,3 +1,17 @@
 <%- include('../partials/header') %>
 <h1><%= title %></h1>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Genre</th>
+    </thead>
+    <tbody>
+        <% stories.forEach( function(s) { %>
+        <tr>
+            <td><%=s.title%></td>
+            <td><%=s.genre%></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
 <%- include('../partials/footer') %>
