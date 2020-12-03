@@ -1,2 +1,18 @@
 <%- include('../partials/header') %>
+
+<h1><%= stories.title %></h1>
+
+<h2>Add your sentence here:</h2>
+<form action="/story/<% stories._id %>" method="POST">
+<input type="text" name="sentence">
+<button type="submit">SCRIBE</button>
+</form>
+
+<h2>Communicate with your fellow editors</h2>
+<label>Comments?</label>
+<form action="/story/<% stories._id %>" method="POST">
+<input type="text" name="comment"></input>
+<button type="submit">Comment</button>
+</form>
+
 <%- include('../partials/footer') %>

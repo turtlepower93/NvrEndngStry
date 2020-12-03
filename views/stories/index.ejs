@@ -8,7 +8,7 @@
     <tbody>
         <% stories.forEach( function(s) { %>
         <tr>
-            <td><%=s.title%></td>
+            <td><a href="/stories/<%= s._id %>"><%=s.title%></a></td>
             <td><%=s.genre%></td>
         </tr>
         <% }); %>

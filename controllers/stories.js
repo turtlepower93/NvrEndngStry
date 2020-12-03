@@ -8,7 +8,9 @@ module.exports = {
 }
 
 function index(req,res) {
+    //console.log(req)
     Story.find({}, function(err,stories) {
+        //console.log(stories)
         res.render('stories/index', {title: 'The Library', stories});
     });
 }
@@ -18,8 +20,9 @@ function newStory(req,res) {
 }
 
 function create(req,res) {
-    console.log('hi')
-    console.log(req.body);
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.avatar = req.user.avatar;
     const story = new Story(req.body);
     story.save(function(err) {
         if (err) res.redirect('/stories/new')
@@ -28,5 +31,7 @@ function create(req,res) {
 }
 
 function show(req,res) {
-    res.render('stories/show', {title:'BOOKS'})
-}
+    Story.findById(req.params.id, function(err, stories) {
+    res.render('stories/show', {stories, title: 'NvrEndngStry'})
+    }
+)}

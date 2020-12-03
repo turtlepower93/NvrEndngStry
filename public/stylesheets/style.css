@@ -2,20 +2,44 @@ body {
   margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
+  background: rgb(167, 187, 230);
 }
 
 a {
-  color: #00B7FF;
+  color: #296780;
   padding:10px;
 }
 
 nav {
   background-color: bisque;
   text-align: right;
-  padding:10px;
+  padding:20px;
+}
+
+nav > * {
+  font-size: 24px;
 }
 
 #google-icon {
 width: 25px;
 }
+
+table {
+  margin: 0 auto;
+  align-self: center;
+  width: 50%
+}
+th {
+  font-size: 24px;
+  border-left: 2px dotted black;
+  border-right: 2px dotted black;
+}
+
+td {
+  text-align: left;
+  border: 1px dotted black;
+  font-size: 20px;
+  padding:20px;
+}
+
 
