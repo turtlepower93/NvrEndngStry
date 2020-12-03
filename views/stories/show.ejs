@@ -3,16 +3,28 @@
 <h1><%= stories.title %></h1>
 
 <h2>Add your sentence here:</h2>
-<form action="/story/<% stories._id %>" method="POST">
-<input type="text" name="sentence">
+<form action="/stories/<%=stories._id%>/sentences" method="POST">
+<input type="text" name="content">
 <button type="submit">SCRIBE</button>
 </form>
 
+<section id='story-container'>
+    <p id='story-body'>
+    <% stories.sentences.forEach(function(s) { %>
+        <%= s.content %>
+    <% }); %>
+    <p>
+</section>
+
 <h2>Communicate with your fellow editors</h2>
 <label>Comments?</label>
-<form action="/story/<% stories._id %>" method="POST">
-<input type="text" name="comment"></input>
+<form action="/stories/<%= stories._id%>/comments" method="POST">
+<input type="text" name="content"></input>
 <button type="submit">Comment</button>
 </form>
+<% stories.comments.forEach(function(s) { %>
+    <%= s.content %>
+    <%= s.avatar %>
+<% }); %>
 
 <%- include('../partials/footer') %>

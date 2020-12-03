@@ -10,7 +10,6 @@ const sentenceSchema = new Schema({
         type: Schema.Types.ObjectId, 
         ref: 'Sentence'
     },
-    userAvatar: String
 }, {
     timestamps:true
 })
