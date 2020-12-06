@@ -25,13 +25,19 @@
 <% stories.comments.forEach(function(s) { %>
     <br>
     <%= s.content %>
+    <br>
     <%= s.userName %>
+    <br>
     <img src="<%= s.avatar %>" alt="Avatar">
+    <br>
     <% if (userId.toString() === s.user.toString()) { %>
     <form action="/comments/<%= s._id %>?_method=DELETE" method="POST">
     <button type="submit">DELETE</button></form>
     <form action="/comments/<%= s.id %>/"></form>
     <a href="/<%= s._id %>/edit">Edit Comment</a>
+    <br>
+    <br>
+    
     <% } %>
 <% }); %>
 
