@@ -10,6 +10,11 @@
         <tr>
             <td><a href="/stories/<%= s._id %>"><%=s.title%></a></td>
             <td><%=s.genre%></td>
+            <td>
+                <p><%= s.userName %></p>
+                <img src="<%= s.avatar %>" alt="Avatar">
+                <form action="/comments/<%= s._id %>?_method=DELETE" method="POST">
+            </td>
         </tr>
         <% }); %>
     </tbody>

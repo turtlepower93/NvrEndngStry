@@ -23,13 +23,16 @@
 <button type="submit">Comment</button>
 </form>
 <% stories.comments.forEach(function(s) { %>
+    <br>
     <%= s.content %>
-    <%= s.name %>
+    <%= s.userName %>
     <img src="<%= s.avatar %>" alt="Avatar">
+    <% if (userId.toString() === s.user.toString()) { %>
     <form action="/comments/<%= s._id %>?_method=DELETE" method="POST">
     <button type="submit">DELETE</button></form>
     <form action="/comments/<%= s.id %>/"></form>
     <a href="/<%= s._id %>/edit">Edit Comment</a>
+    <% } %>
 <% }); %>
 
 <%- include('../partials/footer') %>

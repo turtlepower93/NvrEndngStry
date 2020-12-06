@@ -31,7 +31,11 @@ function create(req,res) {
 }
 
 function show(req,res) {
+    console.log(req.user)
+    userId = req.user._id
+    console.log(userId)
     Story.findById(req.params.id, function(err, stories) {
-    res.render('stories/show', {stories, title: 'NvrEndngStry'})
+    //console.log(stories)
+    res.render('stories/show', {userId, stories, title: 'NvrEndngStry'})
     }
 )}
