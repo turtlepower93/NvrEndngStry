@@ -45,3 +45,7 @@ td {
 #story-body {
   padding: 30px;
 }
+
+img {
+  border-radius: 50%;
+}
