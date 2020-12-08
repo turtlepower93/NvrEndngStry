@@ -7,6 +7,11 @@ body {
   background-size: cover;
 }
 
+.title-page-container {
+  background-image: url("https://cdn.britannica.com/s:700x500/90/130090-050-81EB1C84/Paul-the-Apostle.jpg");
+  background-size: cover;
+}
+
 a {
   color: #296780;
   padding:10px;
