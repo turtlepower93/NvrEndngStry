@@ -1,13 +1,24 @@
 body {
   margin: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Lobster', cursive;
+  font-family: 'Architects Daughter', cursive;
   text-align: center;
-  background: rgb(167, 187, 230);
+  background: url("https://images.unsplash.com/photo-1471970471555-19d4b113e9ed?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2600&q=80");
+  background-size: cover;
 }
 
 a {
   color: #296780;
   padding:10px;
+}
+
+#title-page-background {
+  background: url("https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 nav {
@@ -34,26 +45,52 @@ th {
   border-right: 2px dotted black;
 }
 
-td {
-  text-align: left;
-  border: 1px dotted black;
-  font-size: 20px;
-  padding:20px;
+.show-page-title {
+  background-color: cornsilk;
+  border-bottom:1px solid black;
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+tr > * {
+  border: 1px solid black;
+  font-size: 24px;
 }
 
 #story-body {
-  padding: 30px;
+  padding: 15px;
+  width:50%;
+  margin: 5vmin auto;
+  font-size:  24px;
+  text-align: left;
+  border-left: 1px solid rgba(34, 34, 34, 0.358);
+  box-shadow: 0 0px 20px 0 rgba(255, 255, 255, 1), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+#titlepage-title {
+  font-size: 40px;
+  font-family: 'Lobster', cursive;
 }
 
 .title-page-container {
   width: 33%;
   margin: 33vmin auto;
-  background: white;
-  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: rgba(255, 250, 250, 0.8);
+  box-shadow: 0 0px 20px 0 rgba(255, 255, 255, 1), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.show-page-container {
+  width: 50%;
+  margin: 15vmin auto;
+  background: rgba(255, 250, 250, 0.8);
+  box-shadow: 0 0px 20px 0 rgba(255, 255, 255, 1), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
 .title-page-container > * {
-  padding: 20px;
+  padding: 10px;
 }
 
 .link-button {
@@ -69,6 +106,67 @@ td {
   
 }
 
+.input-new {
+  width:30vmin;
+}
+
+.new-form {
+  width: 50vmin;
+  margin: 0 auto;
+}
+
+.center-title {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+button {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10%;
+  padding:0 2vmin;
+  font-size: 14px;
+  font-family: 'Architects Daughter', cursive;;
+}
+
+.author-library {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .link-button:hover {
   background:darkgrey;
+}
+
+.comment-card {
+  margin: 3vmin auto;
+  padding: 10px;
+  width: 33%;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0px 20px 0 rgb(0, 0, 0), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.comment-content {
+  font-size: 26px;
+}
+
+.comment-card > img {
+  width:10vmin;
+  border-radius: 50%;
+}
+
+td > * {
+  border-radius: 50%;
+  text-align: center;
+  align-self: center;
+  align-content: center;
+}
+
+table {
+  background-color: rgba(177, 173, 227, 0.5);
+  border: 1px solid black;
+  align-items: center;
+}
+
+td {
+  text-align: center;
 }

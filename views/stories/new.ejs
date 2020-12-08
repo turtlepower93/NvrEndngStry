@@ -1,12 +1,14 @@
 <%- include('../partials/header') %>
+<div class="title-page-container">
 <h1><%= title %></h1>
-
-<form action="/stories" method="POST">
+<form class="new-form" action="/stories" method="POST">
     <label>Book Title:</label>
-    <input type="text" name="title">
+    <input class="input-new" type="text" name="title">
+    <br>
     <label>Genre:</label>
-    <input type="text" name="genre">
+    <input class="input-new" type="text" name="genre">
+    <br>
     <input type="submit" value="Add Book">
 </form>
-
+</div>
 <%- include('../partials/footer') %>

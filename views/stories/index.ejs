@@ -4,13 +4,14 @@
     <thead>
         <th>Name</th>
         <th>Genre</th>
+        <th>Author</th>
     </thead>
     <tbody>
         <% stories.forEach( function(s) { %>
         <tr>
             <td><a href="/stories/<%= s._id %>"><%=s.title%></a></td>
             <td><%=s.genre%></td>
-            <td>
+            <td class="author-library">
                 <p><%= s.userName %></p>
                 <img src="<%= s.avatar %>" alt="Avatar">
                 <form action="/comments/<%= s._id %>?_method=DELETE" method="POST">

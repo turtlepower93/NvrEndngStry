@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
-
-<h1><%= stories.title %></h1>
-
+<div class="show-page-container">
+    <div class="show-page-title">
+    <h1 class="center-title"><%= stories.title %>: A <%= stories.genre%> novel</h1>
+    </div>
 <h2>Add your sentence here:</h2>
 <form action="/stories/<%=stories._id%>/sentences" method="POST">
 <input type="text" name="content">
@@ -22,9 +23,12 @@
 <input type="text" name="content"></input>
 <button type="submit">Comment</button>
 </form>
+
+
 <% stories.comments.forEach(function(s) { %>
+    <div class="comment-card">
     <br>
-    <%= s.content %>
+    <div class="comment-content"><%= s.content %></div>
     <br>
     <%= s.userName %>
     <br>
@@ -37,8 +41,10 @@
     <a href="/<%= s._id %>/edit">Edit Comment</a>
     <br>
     <br>
-    
+</div>
+
     <% } %>
 <% }); %>
+</div>
 
 <%- include('../partials/footer') %>
