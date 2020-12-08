@@ -13,7 +13,7 @@
 #### MongoDB
 #### Mongoose
 #### OAuth
-#### heroku
+#### Heroku
 
 ## Getting Started:
 
