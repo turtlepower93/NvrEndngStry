@@ -24,9 +24,9 @@ My Trello board for the project: https://trello.com/b/6xPmqMh0/nvrendngstry
 
 # What is it?
 
-NvrEndngStry is an app that allows users to come together to create a story. In some circles it's called Pass the Story
+NvrEndngStry is an app that allows users to come together to create a story. In some circles it's called Pass the Story.
 
-After you login, you are able to create a new book, or edit an existing story
+After you login, you are able to create a new book, or edit an existing story.
 
 ![Image of Library](https://i.imgur.com/oWPR5dy.png)
 
@@ -59,4 +59,6 @@ You can also add comments! This allows the writers to collaborate if they wish t
 * Add animations to make the site more exciting.
 
 * Add an admin profile that has delete privledges
+
+* Filter out naughty words!
 
